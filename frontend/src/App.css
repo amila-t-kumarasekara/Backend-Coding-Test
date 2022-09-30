@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+#attendanceTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#attendanceTable td, #attendanceTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#attendanceTable tr:hover {background-color: #ddd;}
+
+#attendanceTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left
+}
