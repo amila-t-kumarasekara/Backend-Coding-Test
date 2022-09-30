@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\groupByOwnersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,5 +30,7 @@ Route::controller(AttendanceController::class)->group(function (){
     Route::get('/show','index');
 
 });
+
+Route::get('/groupbyowners', [groupByOwnersController::class, 'challenge04']);
 
 
