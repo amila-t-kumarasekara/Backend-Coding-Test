@@ -78,4 +78,25 @@ class AttendanceController extends Controller
     {
         //
     }
+
+    public function challenge02(Request $request){
+        $num=$request->N;
+        $num--;
+
+        $arr = array();
+
+        for ($x = 0; $x < $num; $x++) {
+            $arr[] = $x;
+        }
+        $num++;
+
+        for ($x = 0; $x < $num; $x++) {
+            $newarr[]=rand($arr[0],end($arr));
+        }
+
+        $value=array_unique( array_diff_assoc( $newarr, array_unique( $newarr ) ) );
+        $value = array_values($value);
+        return response()->json(array('array'=>$newarr,'occur more than once'=>$value));
+
+    }
 }
